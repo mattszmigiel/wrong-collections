@@ -1,0 +1,51 @@
+query GetCustomerSubscriptions($tenantId: ID!, $customerIdentifier: String!) {
+    subscriptionContract {
+        getMany(
+            customerIdentifier: $customerIdentifier
+            tenantId: $tenantId
+            first: 25
+        ) {
+            edges {
+                node {
+                    id
+                    createdAt
+                    recurring {
+                        __typename
+                        currency
+                        period
+                        meteredVariables {
+                            ...MeteredVariable
+                        }
+                    }
+                    status {
+                        activeUntil
+                    }
+                    subscriptionPlan {
+                        meteredVariables {
+                            identifier
+                            name
+                        }
+                    }
+                    usage(start: "1990-01-01" end: "2099-01-01") {
+                        meteredVariableId
+                        quantity
+                    }
+                }
+            }
+        }
+    }
+}
+
+fragment MeteredVariable on SubscriptionContractMeteredVariableReference {
+    id
+    tierType
+    tiers {
+        ...Tier
+    }
+}
+
+fragment Tier on SubscriptionContractMeteredVariableTierReference {
+    price
+    currency
+    threshold
+}
