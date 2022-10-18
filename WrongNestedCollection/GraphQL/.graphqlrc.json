@@ -3,8 +3,8 @@
   "documents": "**/*.graphql",
   "extensions": {
     "strawberryShake": {
-      "name": "CrystallizeClient",
-      "url": "https://pim.crystallize.com/graphql",
+      "name": "TestClient",
+      "url": "https://localhost:7089/graphql/",
       "dependencyInjection": true,
       "strictSchemaValidation": true,
       "hashAlgorithm": "md5",

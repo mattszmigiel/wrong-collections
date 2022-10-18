@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WrongNestedCollection", "WrongNestedCollection\WrongNestedCollection.csproj", "{28D06091-FDC6-4CB6-8252-5EBB925455D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQlServer", "GraphQlServer\GraphQlServer.csproj", "{094AA1CB-E3BD-4128-BDCC-AEFCEA6238A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{28D06091-FDC6-4CB6-8252-5EBB925455D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28D06091-FDC6-4CB6-8252-5EBB925455D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28D06091-FDC6-4CB6-8252-5EBB925455D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{094AA1CB-E3BD-4128-BDCC-AEFCEA6238A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{094AA1CB-E3BD-4128-BDCC-AEFCEA6238A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{094AA1CB-E3BD-4128-BDCC-AEFCEA6238A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{094AA1CB-E3BD-4128-BDCC-AEFCEA6238A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

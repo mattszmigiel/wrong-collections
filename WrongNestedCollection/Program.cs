@@ -1,20 +1,18 @@
+
 using WrongNestedCollection;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCrystallizeClient()
+builder.Services.AddTestClient()
     .ConfigureHttpClient(client => { 
-        client.BaseAddress = new Uri("https://pim.crystallize.com/graphql");
-        client.DefaultRequestHeaders.Add("X-Crystallize-Access-Token-Id", "");
-        client.DefaultRequestHeaders.Add("X-Crystallize-Access-Token-Secret", "");
+        client.BaseAddress = new Uri("https://localhost:7089/graphql/");
     });
 
 var app = builder.Build();
 
-app.MapGet("/", async (CrystallizeClient crystallizeClient) =>
+app.MapGet("/", async (TestClient testClient) =>
 {
-    var result = await crystallizeClient.GetCustomerSubscriptions.ExecuteAsync("", "");
-    var meteredVariables = result.Data.SubscriptionContract.GetMany.Edges.Select(x => x.Node).Select(x => x.Recurring.MeteredVariables);
+    var result = await testClient.GetEntities.ExecuteAsync();
     return true;
 });
 

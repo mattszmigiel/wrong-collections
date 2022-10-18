@@ -1,0 +1,11 @@
+
+query GetEntities {
+    entities {
+        id
+        name
+        nestedObjects {
+            id
+            name
+        }
+    }
+}
